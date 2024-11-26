@@ -4,55 +4,34 @@
          url('fonts/jmh_typewriter-black-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
-
 }
+
 .special-elite-regular {
     font-family: 'jmh_typewriterblack';
     font-weight: 400;
     font-style: normal;
 }
- html, body {
-                margin: 0;
-                padding: 0;
-                min-height: 100%;
-                display: flex;
-                flex-direction: column;
-            }
 
-            body {
-                flex: 1;
-            }
-
-            footer {
-                margin-top: auto;
-                padding: 10px 0;
-                text-align: center;
-            }
-
-            .social-icons a {
-                margin: 0 10px;
-                font-size: 24px;
-                color: #333;
-                text-decoration: none;
-            }
-
-            .social-icons a:hover {
-                color: #0073e6;
-            }
-
-            #featured-video iframe {
-                width: 100%;
-                height: 500px;
-                border: 0;
-            }
-body{
-    background-image: url(../image/sky.jpg);
-    background-size: cover;
-    font-family: 'jmh_typewriterblack';
-    font-weight: 400px;
-    font-style: normal;
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
+body {
+    background-image: url(../image/sky.jpg);
+    background-size: cover;
+    font-family: 'jmh_typewriterblack', sans-serif;
+    font-weight: 400; /* Fixed incorrect '400px' */
+    font-style: normal;
+    flex: 1;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Header & Footer */
 header, footer {
     background-color: transparent;
     color: white;
@@ -62,9 +41,28 @@ header, footer {
 
 h1 {
     margin: 0;
-    color:white;
+    color: white;
+    font-size: 2.5rem;
 }
 
+footer {
+    margin-top: auto;
+    padding: 10px 0;
+    font-size: 0.9em;
+}
+
+footer .social-icons a {
+    margin: 0 10px;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+}
+
+footer .social-icons a:hover {
+    color: #0073e6;
+}
+
+/* CTA Button */
 .cta-button {
     background-color: #333;
     color: white;
@@ -74,6 +72,7 @@ h1 {
     display: inline-block;
 }
 
+/* Intro Section */
 #Intro {
     background: url(../image/sky.jpg) no-repeat center center/cover;
     height: 100vh;
@@ -81,19 +80,36 @@ h1 {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color:black;
+    color: black;
 }
 
-#about, #portfolio-preview, #contact {
-    padding: 2em 1em;
+#Intro p {
+    margin: 0;
+}
+
+/* Featured Video */
+#featured-video {
     text-align: center;
+    margin: 40px 0;
 }
 
-.profile-pic {
-    width: 150px;
-    border-radius: 50%;
+#featured-video h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
 }
 
+#featured-video p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#featured-video iframe {
+    width: 100%;
+    height: 500px;
+    border: 0;
+}
+
+/* Portfolio Section */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -111,23 +127,8 @@ h1 {
     max-width: 100%;
     border-radius: 5px;
 }
-#back-to-portfolio {
-    text-align: center; /* Center the button horizontally */
-    margin: 2rem 0; /* Add some space around the button */
-}
 
-footer .social-icons img {
-    width: 25px;
-    margin-bottom:20px;
-}
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: transparent;
-    color: white;
-    margin-top: auto;
-    font-size: 0.9em;
-}
+/* Art Image Section */
 .art-image {
     display: flex;
     justify-content: center; /* Center image horizontally */
@@ -136,36 +137,13 @@ footer {
     margin: 0 auto; /* Center container itself */
 }
 
-/* Make images responsive */
 .art-image img {
     max-width: 100%;
     height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove bottom space under images */
-}
-/* General Reset */
-body, h1, h2, h3, p, a {
-    margin: 0;
-    padding: 0;
+    display: block;
 }
 
-/* Set a base font size using relative units */
-body {
-    font-size: 1rem; /* Use rem for the base font size */
-    line-height: 1.6;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    min-height: 100%;
-}
-
-/* Responsive Heading Sizes */
-h1 {
-    font-size: 2.5rem; /* Scales based on the root font size */
-    text-align: center;
-    margin-bottom: 1em;
-}
-
+/* Responsive Typography */
 h2 {
     font-size: 2rem;
     margin-bottom: 0.5em;
@@ -176,56 +154,33 @@ h3 {
     margin-bottom: 0.5em;
 }
 
-/* Responsive paragraph text */
 p {
-    font-size: 1rem; /* Default size for paragraphs */
+    font-size: 1rem;
     margin-bottom: 1em;
 }
 
-/* Make text container responsive */
-.art-info, .about-content {
-    max-width: 80%; /* Adjusts width relative to viewport */
-    margin: 0 auto; /* Centers the content */
-    padding: 1rem;
-    font-size: 1rem; /* Uses rem units for consistency */
-}
-
-/* Media queries for different screen sizes */
+/* Media Queries */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem; /* Smaller heading size for tablets */
+        font-size: 2rem;
     }
     h2 {
         font-size: 1.75rem;
     }
     p, .art-info, .about-content {
-        font-size: 0.9rem; /* Slightly smaller text for smaller screens */
+        font-size: 0.9rem;
     }
 }
 
 @media (max-width: 480px) {
     h1 {
-        font-size: 1.5rem; /* Even smaller heading size for mobile */
+        font-size: 1.5rem;
     }
     h2 {
         font-size: 1.25rem;
     }
     p, .art-info, .about-content {
-        font-size: 0.8rem; /* Smaller text for mobile devices */
+        font-size: 0.8rem;
     }
-}
-
-
-#featured-video {
-    text-align: center;
-    margin: 40px 0;
-}
-#featured-video h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-#featured-video p {
-    font-size: 16px;
-    margin-bottom: 20px;
 }
 
