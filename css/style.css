@@ -180,20 +180,6 @@ footer .social-icons {
     color: #0073e6; /* Change color on hover */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    footer .social-icons a {
-        font-size: 25px; /* Slightly smaller icons for tablets */
-    }
-}
-
-@media (max-width: 480px) {
-    footer .social-icons a {
-        font-size: 20px; /* Smaller icons for mobile */
-    }
-}
-
-
 /* Responsive Design for Social Icons */
 @media (max-width: 768px) {
     footer .social-icons a {
