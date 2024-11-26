@@ -8,17 +8,19 @@
 
 /* Base styling */
 body {
-    background: url('../image/sky.jpg') no-repeat center center/cover;
+    background: url('../image/sky.jpg') no-repeat center center/cover; /* Sky image background */
     font-family: 'jmh_typewriterblack';
     margin: 0;
     padding: 0;
     min-height: 100%;
     color: #333;
-    line-height: 1.6; /* Improves readability */
+    line-height: 1.6;
+    background-size: cover; /* Ensures the background image covers the entire body */
 }
 
 /* Header and Navigation */
 header {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for header background */
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -48,6 +50,7 @@ header nav a:hover {
     justify-content: center;
     text-align: center;
     color: white;
+    background-color: transparent; /* Transparent background */
 }
 
 .Intro p {
@@ -56,7 +59,6 @@ header nav a:hover {
 }
 
 .cta-button {
-    
     color: white;
     padding: 12px 25px;
     text-decoration: none;
@@ -73,7 +75,7 @@ header nav a:hover {
 #featured-video {
     text-align: center;
     padding: 2em;
-    
+    background-color: transparent; /* Transparent background */
 }
 
 #featured-video iframe {
@@ -101,6 +103,7 @@ header nav a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    background-color: transparent; /* Transparent background */
 }
 
 /* Title and button center-alignment */
@@ -131,6 +134,7 @@ header nav a:hover {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for the items */
     transition: transform 0.3s ease;
     text-align: center; /* Center text inside each portfolio item */
+    background-color: transparent; /* Transparent background */
 }
 
 .portfolio-item:hover {
@@ -148,7 +152,7 @@ header nav a:hover {
 footer {
     padding: 20px;
     text-align: center;
-    
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for footer */
     color: white;
 }
 
@@ -207,4 +211,3 @@ footer .social-icons {
         height: 200px; /* Further adjust video size on very small screens */
     }
 }
-
