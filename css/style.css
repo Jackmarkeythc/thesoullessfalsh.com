@@ -11,200 +11,172 @@
     font-weight: 400;
     font-style: normal;
 }
-
-html, body {
+/* Base styling */
+body {
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     min-height: 100%;
-    display: flex;
-    flex-direction: column;
+    background-color: #fff;
+    color: #333;
 }
 
-body {
-    background-image: url(../image/sky.jpg);
-    background-size: cover;
-    font-family: 'jmh_typewriterblack', sans-serif;
-    font-weight: 400; /* Fixed incorrect '400px' */
-    font-style: normal;
-    flex: 1;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-/* Header & Footer */
-header, footer {
-    background-color: transparent;
+/* Header and Navigation */
+header {
+    background-color: #222;
     color: white;
     text-align: center;
     padding: 1em 0;
 }
 
-h1 {
+header h1 {
     margin: 0;
+}
+
+header nav a {
     color: white;
-    font-size: 2.5rem;
-}
-
-footer {
-    margin-top: auto;
-    padding: 10px 0;
-    font-size: 0.9em;
-}
-
-footer .social-icons a {
-    margin: 0 10px;
-    font-size: 24px;
-    color: #333;
     text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
 }
 
-footer .social-icons a:hover {
+header nav a:hover {
     color: #0073e6;
-}
-
-/* CTA Button */
-.cta-button {
-    background-color: #333;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
 }
 
 /* Intro Section */
 #Intro {
-    background: url(../image/sky.jpg) no-repeat center center/cover;
+    background: url('../image/sky.jpg') no-repeat center center/cover;
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: black;
+    color: white;
 }
 
-#Intro p {
-    margin: 0;
+.Intro p {
+    font-size: 2rem;
+    margin-bottom: 1em;
 }
 
+.cta-button {
+    background-color: #333;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #0073e6;
+}
 
 /* Featured Video Section */
 #featured-video {
     text-align: center;
-    margin: 40px 0;
+    padding: 2em;
+    background-color: #f7f7f7;
 }
 
-#featured-video h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-#featured-video p {
-    font-size: 16px;
-    margin-bottom: 20px;
-}
-.video-container {
-    width: 80%;
-    max-width: 800px;
-    margin: 0 auto;
-    position: relative;
-    padding-bottom: 45%; /* Maintain aspect ratio */
-}
-
-.video-container iframe {
+#featured-video iframe {
     width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+    max-width: 800px;  /* Ensures it doesn't stretch too wide */
+    height: 450px;  /* Adjusted size */
+    border: 0;
+    display: block;
+    margin: 0 auto;  /* Centers the video */
 }
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio for 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+
 /* Portfolio Section */
+#portfolio-preview {
+    padding: 3em 1em;
+    text-align: center;
+    background-color: #f7f7f7;
+}
+
 .portfolio-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1em;
 }
 
 .portfolio-item {
-    background-color: transparent;
-    padding: 1em;
-    border-radius: 5px;
-    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for the items */
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .portfolio-item img {
-    max-width: 100%;
+    width: 100%;
+    height: auto;
     border-radius: 5px;
 }
 
-/* Art Image Section */
-.art-image {
-    display: flex;
-    justify-content: center; /* Center image horizontally */
-    align-items: center; /* Center image vertically */
-    max-width: 100%;
-    margin: 0 auto; /* Center container itself */
+/* Footer Section */
+footer {
+    padding: 20px;
+    text-align: center;
+    background-color: #222;
+    color: white;
 }
 
-.art-image img {
-    max-width: 100%;
-    height: auto; /* Maintain aspect ratio */
-    display: block;
+footer .social-icons {
+    margin-top: 10px;
 }
 
-/* Responsive Typography */
-h2 {
-    font-size: 2rem;
-    margin-bottom: 0.5em;
+.social-icons a {
+    margin: 0 15px;
+    font-size: 30px;
+    color: white;
+    transition: color 0.3s ease;
 }
 
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5em;
+.social-icons a:hover {
+    color: #0073e6;
 }
 
-p {
-    font-size: 1rem;
-    margin-bottom: 1em;
-}
-
-/* Media Queries */
+/* Responsive Design */
 @media (max-width: 768px) {
-    #featured-video h2 {
-        font-size: 1.8rem;
+    h1 {
+        font-size: 2rem;
     }
-    footer .social-icons a {
-        font-size: 18px; /* Slightly smaller icons on tablet */
+
+    .cta-button {
+        padding: 10px 20px;
+    }
+
+    .social-icons a {
+        font-size: 25px;
     }
 }
 
 @media (max-width: 480px) {
-    #featured-video h2 {
-        font-size: 1.5rem; /* Smaller heading for mobile */
+    h1 {
+        font-size: 1.5rem;
     }
-    footer .social-icons a {
-        font-size: 16px; /* Smaller icons on mobile */
+
+    .cta-button {
+        padding: 8px 15px;
     }
-}
-footer .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 15px; /* Space between icons */
-    padding: 10px 0;
-}
 
-footer .social-icons a {
-    font-size: 20px; /* Smaller icon size */
-    color: #333;
-    transition: color 0.3s;
-}
-
-footer .social-icons a:hover {
-    color: #0073e6;
-}
-
-footer .social-icons a i {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
+    .social-icons a {
+        font-size: 20px;
+    }
 }
