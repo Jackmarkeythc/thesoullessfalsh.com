@@ -97,14 +97,32 @@ header nav a:hover {
 /* Portfolio Section */
 #portfolio-preview {
     padding: 3em 1em;
-    text-align: center;
+    text-align: center; /* Centers the text inside the section */
     background-color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Title and button center-alignment */
+#portfolio-preview h2 {
+    margin-bottom: 20px;
+}
+
+#portfolio-preview .cta-button {
+    align-self: center; /* This ensures the button is centered */
+    margin-top: 20px;
+}
+
+/* Portfolio Grid */
 .portfolio-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 1em;
+    width: 100%;
+    max-width: 1200px; /* Optional: to control the max width of the portfolio grid */
+    margin: 0 auto;
 }
 
 .portfolio-item {
@@ -113,6 +131,7 @@ header nav a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for the items */
     transition: transform 0.3s ease;
+    text-align: center; /* Center text inside each portfolio item */
 }
 
 .portfolio-item:hover {
@@ -123,6 +142,7 @@ header nav a:hover {
     width: 100%;
     height: auto;
     border-radius: 5px;
+    margin-bottom: 10px; /* Space between the image and the description */
 }
 
 /* Footer Section */
