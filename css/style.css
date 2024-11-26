@@ -181,3 +181,17 @@ p {
         font-size: 0.8rem; /* Smaller text for mobile devices */
     }
 }
+
+#featured-video {
+    text-align: center;
+    margin: 40px 0;
+}
+#featured-video h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+#featured-video p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
