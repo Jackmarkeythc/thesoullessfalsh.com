@@ -152,14 +152,17 @@ header nav a:hover {
 footer {
     padding: 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background for footer */
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for footer */
     color: white;
+    position: relative;
+    z-index: 10; /* Ensures footer content stays on top */
 }
 
 footer p {
     margin: 0;
     font-size: 1rem;
     font-weight: normal;
+    opacity: 0.8; /* Light opacity for the text */
 }
 
 footer .social-icons {
@@ -174,8 +177,22 @@ footer .social-icons {
 }
 
 .social-icons a:hover {
-    color: #0073e6; /* Hover effect color */
+    color: #0073e6; /* Change color on hover */
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    footer .social-icons a {
+        font-size: 25px; /* Slightly smaller icons for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    footer .social-icons a {
+        font-size: 20px; /* Smaller icons for mobile */
+    }
+}
+
 
 /* Responsive Design for Social Icons */
 @media (max-width: 768px) {
