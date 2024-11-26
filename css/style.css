@@ -156,6 +156,12 @@ footer {
     color: white;
 }
 
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
 footer .social-icons {
     margin-top: 10px;
 }
@@ -168,8 +174,22 @@ footer .social-icons {
 }
 
 .social-icons a:hover {
-    color: #0073e6;
+    color: #0073e6; /* Hover effect color */
 }
+
+/* Responsive Design for Social Icons */
+@media (max-width: 768px) {
+    footer .social-icons a {
+        font-size: 25px; /* Slightly smaller icons on tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    footer .social-icons a {
+        font-size: 20px; /* Smaller icons on mobile */
+    }
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
