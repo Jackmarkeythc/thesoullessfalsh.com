@@ -20,7 +20,7 @@ body {
 
 /* Header and Navigation */
 header {
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black for header background */
+    background-color: 0; /* Semi-transparent black for header background */
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -152,7 +152,7 @@ header nav a:hover {
 footer {
     padding: 20px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for footer */
+    background-color: 0; /* Semi-transparent background for footer */
     color: white;
     position: relative;
     z-index: 10; /* Ensures footer content stays on top */
