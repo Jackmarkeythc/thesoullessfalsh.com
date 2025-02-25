@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Soulless Flash</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        body {
+            flex: 1;
+        }
+
+        footer {
+            margin-top: auto;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .art-detail-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .art-image img {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .art-info {
+            max-width: 800px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .art-info h2 {
+            margin-bottom: 10px;
+            font-size: 1.5em;
+            color: black;
+        }
+
+        .art-info p {
+            margin: 5px 0;
+            color:black;
+        }
+
+        .cta-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #555;
+        }
+
+        .social-icons img {
+            width: 24px;
+            height: 24px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Art anthology</h1>
+        <nav>
+            <a href="index.html">Home</a> 
+            <a href="portfolio.html">Portfolio</a> 
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <section id="art-detail" class="art-detail-container">
+        <div class="art-image">
+            <img src="image/art9.png" alt="Art Title 1">
+        </div>
+        <div class="art-info">
+            <h2>Art Title 7</h2>
+            <p><strong>Medium:</strong> Screen Print</p>
+            <p><strong>Year:</strong> 2023</p>
+            <p><strong>Description:</strong>Fluid Androgyny</p>
+        </div>
+        <section id="back-to-portfolio">
+            <a href="portfolio.html" class="cta-button">Back to Portfolio</a>
+        </section>
+    </section>
+
+    
+
+    <footer>
+        <p>&copy; 2024 Sez. All rights reserved.</p>
+        <section id="social-media">
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Sez Zhao's Facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Sez Zhao's Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Visit Sez Zhao's Twitter">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
